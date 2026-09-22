@@ -1,0 +1,7 @@
+node_modules
+dist
+.env
+.env.*
+tests/jssip.bundle.js
+*.local
+.DS_Store
