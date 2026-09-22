@@ -5,3 +5,4 @@ dist
 tests/jssip.bundle.js
 *.local
 .DS_Store
+pipeline/exemplo/

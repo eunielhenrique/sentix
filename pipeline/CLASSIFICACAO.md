@@ -45,3 +45,16 @@ Regras:
 - Consolidação por telefone: última chamada com conversa define a classificação; tentativas sem
   conversa somam no contador. Um telefone pode ter várias chamadas.
 - Alertas são para o coordenador ler: a IA nunca decide sozinha sobre eles.
+
+## Convenções fixadas no lote 1 (valem para todos os lotes e para a automação)
+- Correio de voz / secretária eletrônica → `tipo_chamada` `caixa_postal` ou `secretaria_eletronica`,
+  `falou_com_lead` false, `classificacao_lead` **null** (número válido, só não atendeu; conta como tentativa).
+- Ruído ou só o agente falando → `sem_audio_util` + `classificacao_lead` `invalido`.
+- Conversa cortada sem posição do lead → `neutro` + `proximo_passo` `ligar_novamente`; retorno
+  combinado por qualquer das partes → `retornar_depois`.
+- Aceitou grupo ou confirmou que vai divulgar → `engajado`; já repassa a contatos ou se ofereceu
+  como cabo eleitoral → `apoiador_ativo` (com `proximo_passo` `escalar_para_coordenador`).
+- Booleans sem evidência ficam null; `interesse`/`sentimento_lead` null em chamadas curtas sem conteúdo.
+- Alertas sempre que: pedido de dinheiro/benefício vinculado ao voto, promessa do agente
+  ("vou passar para a equipe resolver"), dado sensível ditado (endereço, saúde), agente sem identificar
+  a campanha (ex.: "pesquisa de instituto"), ligação fora do funil (articulação política).
