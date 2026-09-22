@@ -9,8 +9,8 @@ R$ 0,09/min fixo, cobrado por minuto iniciado).
 | Plano | Mensal | Anual | O que inclui |
 |---|---|---|---|
 | **Conversas** | R$ 149 | R$ 127 | WhatsApp por QR ou API oficial, kanban, entrada automática de leads (WhatsApp e Lead Ads), distribuição, cadência, IA no chat (sugerir/otimizar, análise da conversa), gamificação, painel do gestor |
-| **Completo** | R$ 299 | R$ 254 | Tudo do Conversas + discador web com **300 min** de voz, gravação, transcrição e análise de ligações, coaching por vendedor, BINA dinâmica, classificador de caixa postal |
-| **Pro** | R$ 449 | R$ 382 | Tudo do Completo com **800 min** de voz + plano de coaching semanal + **100 min de agente de voz IA** + relatórios avançados e webhooks |
+| **Completo** | R$ 299 | R$ 254 | Tudo do Conversas + discador web com **300 min falados**, gravação, transcrição e análise de ligações, **coaching por vendedor com meta semanal**, BINA dinâmica, classificador de caixa postal |
+| **Pro** (só após operadora própria) | R$ 449 | R$ 382 | Tudo do Completo com **800 min falados** + **100 min de agente de voz IA** + relatórios avançados e webhooks |
 
 Adicionais: minuto de voz excedente R$ 0,55 (fixo R$ 0,15); agente de voz IA R$ 1,50/min; templates
 de WhatsApp oficial repassados com +25 %; assento Gestor (sem voz) grátis até 1 por 5 vendedores.
@@ -28,7 +28,7 @@ entregando gamificação e coaching que nenhum deles tem.
 |---|---|---|---|---|
 | Conversas R$ 149 | motor WhatsApp ~R$ 8 + IA ~R$ 4 + infra ~R$ 5 = **R$ 17** | **89 %** | igual | 89 % |
 | Completo R$ 299 | 300 min × 0,41 = R$ 123 + IA ~R$ 15 + WA/infra R$ 13 = **R$ 151** | **49 %** | 300 × 0,10 = R$ 30 + 28 = **R$ 58** | **81 %** |
-| Pro R$ 449 | 800 × 0,41 = R$ 328 + 100 min IA voz × ~R$ 1,00 = R$ 100 + R$ 30 = **R$ 458** | **−2 %** | 800 × 0,10 = R$ 80 + 100 + 30 = **R$ 210** | **53 %** |
+| Pro R$ 449 | 800 × 0,41 = R$ 328 + 100 min IA voz × R$ 1,10 = R$ 110 + R$ 30 = **R$ 468** | **−4 %** | 800 × 0,10 = R$ 80 + 100 × 0,80 = R$ 80 + 30 = **R$ 190** | **58 %** |
 
 Leitura: **Conversas e Completo vendem desde já.** O **Pro só existe depois da operadora própria**
 (ou com o assento Ilimitado anual da API4COM a R$ 169,90 como custo, que dá 33 % de margem no Pro).
