@@ -39,3 +39,18 @@ python3 consolidate.py work/                               # 4. CSVs por telefon
 Trocar o cron pelo **webhook `channel-hangup`** da API4COM (Integrações → Webhook) apontando para o
 backend da Sentix: cada chamada encerrada dispara download, transcrição e classificação em minutos,
 e o resultado entra no card do lead e no placar.
+
+## Versão Vercel (produção)
+
+Funções em `api/` (Node, região `gru1`), armazenamento no **Vercel Blob privado** (`chamadas/<id>/audio.mp3`
+e `chamadas/<id>/analise.json`). O Gemini transcreve e classifica numa única chamada por gravação.
+
+| Rota | Quem chama | Autenticação | O que faz |
+|---|---|---|---|
+| `/api/webhook` | API4COM (evento `channel-hangup`) | `?key=WEBHOOK_SECRET` | processa gravações pendentes das últimas 2 h |
+| `/api/cron` | Vercel Cron, 1x/dia 09:00 UTC | `Bearer CRON_SECRET` (automático) | varredura de 48 h (`?horas=N` para reprocessar) |
+| `/api/relatorio` | gestor | `?key=REPORT_KEY` | JSON consolidado; `&formato=leads.csv` ou `vendedores.csv` |
+
+Variáveis de ambiente: `API4COM_TOKEN` (token sem expiração), `GEMINI_API_KEY`, `GEMINI_MODEL`
+(opcional, padrão `gemini-2.5-flash`), `WEBHOOK_SECRET`, `CRON_SECRET`, `REPORT_KEY` e as do Blob
+(`BLOB_STORE_ID`/OIDC, criadas ao conectar o store).
